@@ -1,0 +1,27 @@
+﻿#BNF+IAT 1.0 UTF-8;
+!grammar call;
+!slot <dial>;
+!slot <pls>;
+!slot <forme>;
+!slot <ask>;
+!start <callstart>;
+
+
+<callstart>:[<pls>][<forme>]<dial>[<ask>];
+<pls>:请;
+<forme>:帮我|给我|替我;
+<ask>:吗|给我;
+
+
+<dial>:
+开灯!id(1)|开个灯!id(1)|
+关灯!id(2)|关个灯!id(2)|
+开蜂鸣器!id(3)|打开蜂鸣器!id(3)|
+关蜂鸣器!id(4)|关闭蜂鸣器!id(4)|
+打开照片!id(5)|
+关闭照片!id(6)|
+下一张!id(7)|
+上一张!id(8)|
+打开视频!id(9)|
+关闭视频!id(10)|
+播放音乐!id(11)|播放声音!id(11);
